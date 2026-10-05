@@ -242,11 +242,16 @@ main { position: relative; z-index: 1; }
 .summary { font-size: 0.95rem; color: var(--cocoa); border-top: 1px solid var(--line); padding-top: 14px; margin: 6px 0 14px; }
 .builder .btn { width: 100%; }
 
-/* phones: the cake on top, a compact panel below with each step as a sideways-scrolling row */
+/* phones: the cake stays in view at the top; the steps scroll inside the panel below it,
+   with the send button pinned to the bottom of the panel */
 @media (max-width: 860px) {
-  .build { grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(180px, 1fr) auto; height: 100svh; min-height: 620px; padding: var(--header-h) 0 0; gap: 0; }
+  .build { grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(140px, 34svh) minmax(0, 1fr); height: 100svh; min-height: 520px; padding: var(--header-h) 0 0; gap: 0; }
   .build-stage { position: relative; top: 0; height: auto; align-self: stretch; }
-    .builder { min-width: 0; border-radius: 24px 24px 0 0; padding: 16px 0 calc(16px + env(safe-area-inset-bottom)); box-shadow: 0 -10px 40px -20px rgba(58, 36, 30, 0.4); }
+  .builder {
+    min-width: 0; min-height: 0; align-self: stretch; overflow-y: auto; -webkit-overflow-scrolling: touch;
+    border-radius: 24px 24px 0 0; padding: 16px 0 0; box-shadow: 0 -10px 40px -20px rgba(58, 36, 30, 0.4);
+  }
+  .builder .btn { position: sticky; bottom: calc(12px + env(safe-area-inset-bottom)); margin-top: 6px; margin-bottom: calc(12px + env(safe-area-inset-bottom)); box-shadow: 0 10px 24px -10px rgba(58, 36, 30, 0.5); }
   .builder h2, .builder > p, .builder .summary, .builder .btn, .step legend, .hint, .tints { margin-left: 16px; margin-right: 16px; }
   .builder h2 { font-size: 1.5rem; }
   #build-intro { display: none; }
@@ -255,7 +260,11 @@ main { position: relative; z-index: 1; }
   .step legend { font-size: 1rem; margin-bottom: 6px; }
   .step-n { width: 22px; height: 22px; font-size: 0.75rem; }
   .hint { display: none; }
-  .chips { flex-wrap: nowrap; overflow-x: auto; padding: 2px 16px 4px; scrollbar-width: none; scroll-padding: 0 16px; }
+  .chips {
+    flex-wrap: nowrap; overflow-x: auto; padding: 2px 16px 4px; scrollbar-width: none; scroll-padding: 0 16px;
+    /* fade the right edge so it's clear the row scrolls sideways */
+    -webkit-mask-image: linear-gradient(90deg, #000 82%, transparent); mask-image: linear-gradient(90deg, #000 82%, transparent);
+  }
   .chips::-webkit-scrollbar { display: none; }
   .chips label { flex: none; }
   .chips span { min-height: 36px; font-size: 0.9rem; white-space: nowrap; }
