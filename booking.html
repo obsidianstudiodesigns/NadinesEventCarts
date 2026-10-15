@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Charcuterie Cart Booking &amp; Mini Cake Orders | Nadine's Event Carts</title>
+  <meta name="description" content="Book Nadine's hosted charcuterie cart (Classic R195 or Deluxe R230 per person, 15 to 50 guests) or order mini cakes. Choose your menu online and send it to Nadine on WhatsApp for a quotation within 2 days.">
+  <link rel="canonical" href="https://obsidianstudiodesigns.github.io/NadinesEventCarts/booking.html">
+  <meta name="theme-color" content="#FBF5F3">
+  <link rel="icon" href="assets/brand/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Book Nadine's Charcuterie Cart | Nadine's Event Carts">
+  <meta property="og:description" content="Choose a Classic or Deluxe charcuterie experience, or order mini cakes, and send your booking to Nadine on WhatsApp.">
+  <meta property="og:image" content="https://obsidianstudiodesigns.github.io/NadinesEventCarts/assets/brand/og-image.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Jost:wght@300..600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=9">
+  <link rel="stylesheet" href="css/booking.css?v=2">
+</head>
+<body class="legal-page booking-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header is-solid">
+    <a class="brand" href="./" aria-label="Nadine's Event Carts home page">
+      <img src="assets/brand/logo-round-256.png" alt="" width="256" height="256">
+      <span class="brand-name">Nadine's <span>Event Carts</span></span>
+    </a>
+    <a class="btn btn-wa header-cta" href="https://wa.me/27627248788" target="_blank" rel="noopener">WhatsApp 062 724 8788</a>
+  </header>
+
+  <main id="main" class="booking-main">
+    <a class="back-link" href="./">Back to the home page</a>
+
+    <header class="booking-intro">
+      <img class="leaves" src="assets/brand/leaves-sm.png" alt="" width="354" height="79">
+      <p class="booking-kicker">Nadine's Charcuterie Cart</p>
+      <p class="script-note">An artfully curated eating experience</p>
+      <h1>Client enquiry and booking form</h1>
+      <p class="lede">Thank you for your interest in our hosted charcuterie cart. Please complete the details below so we can understand your requirements and create a beautiful, personalised experience for your event.</p>
+    </header>
+
+    <div class="form-switch" role="tablist" aria-label="Choose a form">
+      <a role="tab" id="tab-charcuterie" href="#charcuterie" aria-controls="charcuterie" aria-selected="true">Charcuterie cart booking</a>
+      <a role="tab" id="tab-mini-cakes" href="#mini-cakes" aria-controls="mini-cakes" aria-selected="false">Mini cake order</a>
+    </div>
+
+    <!-- ============================================================ charcuterie cart -->
+    <section class="form-panel" id="charcuterie" role="tabpanel" aria-labelledby="tab-charcuterie">
+      <form class="booking" id="charc-form" novalidate>
+        <div class="booking-body">
+          <fieldset class="block">
+            <legend><span class="block-n">1</span> Your details</legend>
+            <div class="field">
+              <label for="c-name">Full name</label>
+              <input id="c-name" name="name" autocomplete="name" required>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="c-phone">Telephone or WhatsApp</label>
+                <input id="c-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
+              </div>
+              <div class="field">
+                <label for="c-email">Email address <span class="opt">optional</span></label>
+                <input id="c-email" name="email" type="email" autocomplete="email">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="block">
+            <legend><span class="block-n">2</span> Your event</legend>
+            <div class="field-row">
+              <div class="field">
+                <label for="c-type">Event type</label>
+                <input id="c-type" name="type" list="event-types" placeholder="For example, a 40th birthday" required>
+                <datalist id="event-types">
+                  <option value="Birthday"><option value="Wedding"><option value="Engagement"><option value="Bridal shower">
+                  <option value="Baby shower"><option value="Corporate event"><option value="Year-end function"><option value="Small gathering">
+                </datalist>
+              </div>
+              <div class="field">
+                <label for="c-guests">Number of guests</label>
+                <input id="c-guests" name="guests" type="number" inputmode="numeric" min="15" max="50" step="1" placeholder="15 to 50" required>
+                <p class="field-hint">Minimum 15 guests, maximum 50 guests.</p>
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="c-date">Date of event</label>
+                <input id="c-date" name="date" type="date" required>
+              </div>
+              <div class="field">
+                <label for="c-time">Time of event</label>
+                <input id="c-time" name="time" type="time" required>
+              </div>
+            </div>
+            <p class="field-hint block-hint">Your event is hosted for 3 hours, with setup an hour before and breakdown an hour after.</p>
+            <div class="field">
+              <label for="c-location">Location of event</label>
+              <input id="c-location" name="location" autocomplete="street-address" placeholder="Address or venue, and suburb" required>
+            </div>
+            <div class="field">
+              <label for="c-allergies">Guest dietary needs or allergies we should know about <span class="opt">optional</span></label>
+              <textarea id="c-allergies" name="allergies" rows="2" placeholder="For example, two guests are vegetarian, one has a nut allergy"></textarea>
+            </div>
+          </fieldset>
+
+          <fieldset class="block">
+            <legend><span class="block-n">3</span> Your charcuterie experience</legend>
+            <p class="block-lede">Choose one of our two eating experiences. All food is served on wooden or bamboo boards for effortless entertaining.</p>
+            <div class="experiences">
+              <label class="experience">
+                <input type="radio" name="experience" value="classic">
+                <span class="exp-card">
+                  <span class="exp-name">Classic</span>
+                  <span class="exp-price">R195 <small>per person</small></span>
+                  <span class="exp-detail">Three cheeses, three meats, three fruit and vegetable skewers, two breads or biscuits, two dips and a sweet.</span>
+                </span>
+              </label>
+              <label class="experience">
+                <input type="radio" name="experience" value="deluxe">
+                <span class="exp-card">
+                  <span class="exp-name">Deluxe</span>
+                  <span class="exp-price">R230 <small>per person</small></span>
+                  <span class="exp-detail">A wider choice, with brie, chorizo, caprese skewers, quiche, mini croissants, bacon jam, macaroons and churros.</span>
+                </span>
+              </label>
+            </div>
+            <p class="group-error" id="exp-error" role="alert" hidden></p>
+          </fieldset>
+
+          <div class="menu" id="menu" hidden>
+            <p class="menu-lede">Please select from each group as many choices as shown.</p>
+            <div id="menu-groups"></div>
+          </div>
+
+          <fieldset class="block" id="extras-block">
+            <legend><span class="block-n">4</span> Optional extras</legend>
+            <p class="block-lede">Drinks and desserts are available with both experiences at R50 per person each.</p>
+            <div id="extras"></div>
+            <div class="field addon-field">
+              <label class="check"><input type="checkbox" name="colour" value="yes"> I'd like help with a colour scheme <span class="opt">extra cost, depending on your request</span></label>
+              <input id="c-colour" name="colourScheme" placeholder="Your colours, for example blush pink, sage and gold" hidden>
+            </div>
+            <div class="field addon-field">
+              <label class="check"><input type="checkbox" name="balloons" value="yes"> I'm interested in a balloon garland <span class="opt">extra cost, depending on your request</span></label>
+            </div>
+            <div class="field">
+              <label for="c-notes">Anything else? <span class="opt">optional</span></label>
+              <textarea id="c-notes" name="notes" rows="3" placeholder="Venue access, timings, special requests"></textarea>
+            </div>
+          </fieldset>
+
+          <ul class="terms-list">
+            <li>We charge <strong>R1,500</strong> for travelling, cart setup and breakdown, and 3 hours hosting. This is included in your quotation.</li>
+            <li>We travel within a 100&nbsp;km radius of Benoni, Gauteng.</li>
+            <li>Colour schemes and balloon garlands are available at an extra cost, depending on your request.</li>
+            <li>Once you send your selections, expect a quotation within 2 days.</li>
+          </ul>
+        </div>
+
+        <aside class="estimate" aria-labelledby="est-title">
+          <div class="estimate-card">
+            <h2 id="est-title">Your estimate</h2>
+            <dl class="est-lines" id="est-lines">
+              <div><dt>Choose an experience</dt><dd>R0</dd></div>
+            </dl>
+            <p class="est-total"><span>Estimated total</span> <strong id="est-total">R1,500</strong></p>
+            <p class="est-note">An estimate from Nadine's current prices. Your final quotation follows within 2 days.</p>
+            <p class="est-progress" id="est-progress"></p>
+            <p class="form-error" id="charc-error" role="alert" hidden></p>
+            <button class="btn btn-wa" type="submit">Send my booking on WhatsApp</button>
+            <button class="btn btn-ghost-dark" type="button" data-print>Print or save as PDF</button>
+            <p class="form-note">The WhatsApp button opens WhatsApp with your booking written out, ready to send. Nothing is stored on this website. See the <a href="privacy.html">privacy policy</a>.</p>
+          </div>
+        </aside>
+      </form>
+      <a class="est-bar" id="est-bar" href="#est-title"><span>Estimated total <strong id="est-bar-total">R1,500</strong></span> <span class="est-bar-cta">Review and send</span></a>
+      <p class="paper-form">Prefer a printed form? <a href="assets/docs/nadines-charcuterie-cart-booking-form.pdf" download>Download the booking form (PDF)</a> and send it back to Nadine.</p>
+    </section>
+
+    <!-- ============================================================ mini cakes -->
+    <section class="form-panel" id="mini-cakes" role="tabpanel" aria-labelledby="tab-mini-cakes" hidden>
+      <form class="booking booking-cakes" id="cake-form" novalidate>
+        <div class="booking-body">
+          <div class="cake-intro">
+            <img src="assets/photos/mini-rose-gold.jpg" alt="Mini cakes with piped cream, cherry and chocolate balls in rose-gold foil trays" width="520" height="340" loading="lazy">
+            <div>
+              <h2>Mini cake order</h2>
+              <p>Thank you for considering Nadine's Event Carts to make your special occasion memorable. These taste experiences are available in our mini cake range.</p>
+              <p class="notice">Please place your order at least 3 days in advance.</p>
+            </div>
+          </div>
+
+          <fieldset class="block">
+            <legend><span class="block-n">1</span> Choose your flavours</legend>
+            <div class="flavour-list" id="flavours"></div>
+            <p class="group-error" id="flavour-error" role="alert" hidden></p>
+          </fieldset>
+
+          <fieldset class="block">
+            <legend><span class="block-n">2</span> Your order details</legend>
+            <div class="field-row">
+              <div class="field">
+                <label for="m-name">Client name</label>
+                <input id="m-name" name="name" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="m-phone">Contact number</label>
+                <input id="m-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="m-date">Date required</label>
+                <input id="m-date" name="date" type="date" required>
+                <p class="field-hint" id="m-date-hint">At least 3 days from today.</p>
+              </div>
+              <div class="field">
+                <label for="m-qty">Quantity required</label>
+                <input id="m-qty" name="quantity" inputmode="numeric" placeholder="For example, 24 mini cakes" required>
+              </div>
+            </div>
+            <fieldset class="field">
+              <legend>Pick-up or delivery?</legend>
+              <div class="checks">
+                <label class="check"><input type="radio" name="collect" value="Pick-up" checked> Pick-up</label>
+                <label class="check"><input type="radio" name="collect" value="Delivery"> Delivery</label>
+              </div>
+              <input id="m-address" name="address" autocomplete="street-address" placeholder="Delivery address" aria-label="Delivery address" hidden>
+              <p class="field-hint">Deliveries go within 30&nbsp;km of the East Rand.</p>
+            </fieldset>
+            <div class="field">
+              <label for="m-notes">Special requests or notes <span class="opt">optional</span></label>
+              <textarea id="m-notes" name="notes" rows="3" placeholder="A birthday box, a colour theme, a message"></textarea>
+            </div>
+          </fieldset>
+        </div>
+
+        <aside class="estimate" aria-labelledby="cake-sum-title">
+          <div class="estimate-card">
+            <h2 id="cake-sum-title">Your order</h2>
+            <p class="est-empty" id="cake-summary">No flavours chosen yet.</p>
+            <p class="est-note">Nadine will confirm your order and price. Should you have any questions or special requests, please feel free to contact her.</p>
+            <p class="form-error" id="cake-error" role="alert" hidden></p>
+            <button class="btn btn-wa" type="submit">Send my order on WhatsApp</button>
+            <button class="btn btn-ghost-dark" type="button" data-print>Print or save as PDF</button>
+            <p class="form-note">Nothing is stored on this website. See the <a href="privacy.html">privacy policy</a>.</p>
+          </div>
+        </aside>
+      </form>
+    </section>
+
+    <p class="sign-off">We look forward to sharing your special moment. <span class="script-note">Nadine</span></p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-legal">
+      <p>© <span id="year">2026</span> Nadine's Event Carts. All rights reserved.</p>
+      <nav class="legal-links" aria-label="Legal">
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of use</a>
+      </nav>
+      <p class="credit">Website designed by <a href="https://obsidianstudiodesigns.co.za/" target="_blank" rel="noopener">Obsidian Studio Designs</a></p>
+    </div>
+  </footer>
+
+  <script type="module" src="js/booking.js?v=5"></script>
+</body>
+</html>

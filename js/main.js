@@ -52,6 +52,8 @@ function finishLoading() {
     document.documentElement.classList.remove('is-loading');
     document.documentElement.classList.add('is-loaded');
     loader.addEventListener('animationend', (e) => { if (e.target === loader) loader.remove(); });
+    // if the browser skips the exit animation (a hidden tab, for example), remove it anyway
+    setTimeout(() => loader.remove(), 1500);
   }, wait + 250);
 }
 // never hold the page hostage: stop waiting after 20 seconds

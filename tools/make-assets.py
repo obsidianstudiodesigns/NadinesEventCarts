@@ -29,6 +29,9 @@ CROPS = {
     'gift-box': ('fb-04.jpg', (336, 268, 532, 486)),
     'boxes-open': ('fb-04.jpg', (292, 478, 532, 650)),
     'charcuterie-cup': ('fb-03.jpg', (286, 432, 446, 766)),
+    # from the October 2026 flyers Nadine sent
+    'mini-rose-gold': ('flyer-mini-cake-range.jpg', (440, 720, 700, 890)),
+    'dessert-trays-wide': ('flyer-event-carts-oct.jpg', (434, 467, 788, 818)),
 }
 
 
@@ -40,6 +43,11 @@ def upscale(im, factor=2):
 for name, (f, box) in CROPS.items():
     im = Image.open(SRC + f).convert('RGB').crop(box)
     upscale(im).save(PHOTOS + name + '.jpg', quality=86, optimize=True, progressive=True)
+
+# the leaf garland from Nadine's charcuterie booking form, used as a section ornament
+leaves = Image.open(SRC + 'pdf-leaves.png').convert('RGBA')
+leaves.save('assets/brand/leaves.png', optimize=True)
+leaves.resize((leaves.width // 2, leaves.height // 2), Image.LANCZOS).save('assets/brand/leaves-sm.png', optimize=True)
 
 # ------------------------------------------------------------------ procedural normal maps
 rng = np.random.default_rng(7)

@@ -3,6 +3,9 @@
 A single-page site for Nadine's Event Carts (Nadine's Cake Cart and Charcuterie Cart, East Rand), with privacy and terms pages.
 
 - `index.html` is the website; `privacy.html` and `terms.html` are the legal pages.
+- `booking.html` is Nadine's charcuterie cart enquiry and booking form and her mini cake order form, as web forms.
+  `js/booking-menu.js` holds the menus and prices, copied from her PDF form; `js/booking.js` enforces the
+  "choose 3 / choose 2 / choose 1" limits, works out the estimate and sends the booking to WhatsApp.
 - `js/scene.js` is the 3D scene: Nadine's white panelled cart with its pine top, umbrella, foil trays of mini cakes,
   topping bowls, drizzle bottles and the "create your own" chalkboard, in a real Gauteng garden. Scrolling moves the
   camera from the cart (hero) down to a close-up of the cake you design.
@@ -25,7 +28,12 @@ Then open http://localhost:5540. Add `#debug` to the URL to expose `window.__car
 - Contact details, service areas and the menu come from the Facebook "About" section and the flyers.
   The page has no email address, so the site uses phone and WhatsApp only.
 - There are no reviews on the site because the Facebook page has none yet (0 reviews).
-- No prices are shown because none are published. Add them once Nadine confirms.
+- Charcuterie prices (Classic R195 and Deluxe R230 per person, extras R50 per person, R1,500 travel and hosting),
+  the 15 to 50 guest limit and the 100 km travel radius come from Nadine's booking form, `tools/src/charcuterie-booking-form.pdf`
+  (also offered for download as `assets/docs/nadines-charcuterie-cart-booking-form.pdf`). If her prices change,
+  edit `js/booking-menu.js` and the copy in `index.html` and `booking.html`.
+- The mini cake range (seven flavours, 3 days' notice) comes from her October 2026 flyer, `tools/src/flyer-mini-cake-range.jpg`.
+  Mini cake prices aren't published, so none are shown.
 
 ## 3D assets
 `assets/3d/` holds CC0 assets from Poly Haven (polyhaven.com): the "Pretoria Gardens" panorama and HDRI, and the
